@@ -7,3 +7,13 @@ reverse._transform = function (data, enc, cb) {
 };
 
 process.stdin.pipe(reverse).pipe(process.stdout);
+
+
+
+// Official solution
+// var concat = require('concat-stream');
+//
+// process.stdin.pipe(concat(function (src) {
+//   var s = src.toString().split('').reverse().join('');
+//   console.log(s);
+// }));
